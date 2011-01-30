@@ -1,8 +1,10 @@
 package com.github.stuartyeates.TEIDictLeitner;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Date;
+import java.util.Random;
 
 public class Model {
 	
@@ -19,21 +21,44 @@ public class Model {
 	private final long POOL_GAP_5 = 1000*60*60*24*19;
 
 	private Set<Word> deck0 = new TreeSet<Word>();
-	private Set<Word> deck1 = new TreeSet<Word>();
+	private ArrayList<Word> deck1 = new ArrayList<Word>();
 	private Set<Word> deck2 = new TreeSet<Word>();
 	private Set<Word> deck3 = new TreeSet<Word>();
 	private Set<Word> deck4 = new TreeSet<Word>();
 	private Set<Word> deck5 = new TreeSet<Word>();
 	private Set<Word> deck6 = new TreeSet<Word>();
 	
-	public boolean answerQuestion(Question question, int response){
-		
-		return false;
+	private Random random = new Random(new Date().getTime());
+	
+	public void answerQuestion(Question question, int answer){
+			Word word = question.getQuestion();
+			if (question.correct(answer)){
+				word.incrementCount();
+				deck1.remove(word);
+				switch (word.getCount()){
+				case 1: deck2.add(word); break;		
+				case 2: deck3.add(word); break;		
+				case 3: deck4.add(word); break;		
+				case 4: deck5.add(word); break;		
+				case 5: default: deck6.add(word); break;		
+				}
+			} else {
+			 word.resetCount();
+			}
 	}
 	
 	public Question generateQuestion(){
+		Word choice1 = deck1.get(random.nextInt(deck1.size()));
+		Word choice2 = null;
+		Word choice3 = null;
+		while (choice2 == null || choice2 == choice1)
+			choice2 = deck1.get(random.nextInt(deck1.size()));
+		while (choice3 == null || choice3 == choice1 || choice3 == choice2)
+			choice3 = deck1.get(random.nextInt(deck1.size()));
 		
-		return null;
+		return new Question(
+				random.nextInt(2)+1,
+				choice1,choice2,choice3);
 	}
 	
 	public boolean addWord(Word word){

@@ -14,6 +14,7 @@ public class Word implements Comparable {
 	public Date getDate(){return date;};
 	public int getCount(){return count;};
 	public void incrementCount(){count++;};
+	public void resetCount(){count=0;};
 	
 	public Word(String word,String definition, Date date){
 		this.word = word;
