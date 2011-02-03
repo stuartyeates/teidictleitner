@@ -7,13 +7,6 @@ import java.util.Date;
 import java.util.Random;
 
 public class Model {
-	private Model(){};
-	private static Model singleton = new Model();
-	public static Model getSingleton(){
-		if (singleton == null)
-			singleton = new Model();
-		return singleton;
-	}
 	
 	private final int POOL_SIZE = 20;
 	// milliseconds in 5 hours
@@ -55,13 +48,13 @@ public class Model {
 	}
 	
 	public Question generateQuestion(){
-		Word choice1 = deck1.get(random.nextInt(deck1.size()));
+		Word choice1 = deck1.get(random.nextInt(deck1.size()-1));
 		Word choice2 = null;
 		Word choice3 = null;
 		while (choice2 == null || choice2 == choice1)
-			choice2 = deck1.get(random.nextInt(deck1.size()));
+			choice2 = deck1.get(random.nextInt(deck1.size()-1));
 		while (choice3 == null || choice3 == choice1 || choice3 == choice2)
-			choice3 = deck1.get(random.nextInt(deck1.size()));
+			choice3 = deck1.get(random.nextInt(deck1.size()-1));
 		
 		return new Question(
 				random.nextInt(2)+1,
