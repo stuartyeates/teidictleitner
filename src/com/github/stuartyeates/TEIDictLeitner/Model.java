@@ -7,6 +7,13 @@ import java.util.Date;
 import java.util.Random;
 
 public class Model {
+	private Model(){};
+	private static Model singleton = new Model();
+	public static Model getSingleton(){
+		if (singleton == null)
+			singleton = new Model();
+		return singleton;
+	}
 	
 	private final int POOL_SIZE = 20;
 	// milliseconds in 5 hours

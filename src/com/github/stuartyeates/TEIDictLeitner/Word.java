@@ -2,7 +2,7 @@ package com.github.stuartyeates.TEIDictLeitner;
 
 import java.util.Date;
 
-public class Word implements Comparable {
+public class Word implements Comparable<Word> {
 	
 	private String word;
 	private String definition;
@@ -28,12 +28,15 @@ public class Word implements Comparable {
 		this.date = new Date();
 	}
 	
-	  public int compareTo (Object o) {
-		  if (o == null || !(o instanceof Word)) {
+	  public int compareTo (Word o) {
+		  if (o == null) {
+			  System.err.println("comparing to null");
 			  throw new IllegalArgumentException ("...");  
 		  }	
-		  if (this == o)
-			  	return 0;
+		  if (this == o){
+			  System.err.println("comparing to self");
+			  return 0;
+		  }	
 		  Word other = (Word) o;
 		  if (this.getDate().getTime() != other.getDate().getTime()){
 			  if (this.getDate().getTime() > other.getDate().getTime())

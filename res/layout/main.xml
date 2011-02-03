@@ -4,8 +4,9 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<Button android:text="Query" android:id="@+id/query1" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-<Button android:text="Choice1" android:id="@+id/choice2" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-<Button android:text="Choice2" android:id="@+id/choice3" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-<Button android:text="Choice3" android:id="@+id/choice4" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<Button android:text="Query" android:onClick="query" android:id="@+id/query" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<Button android:text="Choice1" android:onClick="choice1" android:id="@+id/choice1" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<Button android:text="Choice2" android:onClick="choice2" android:id="@+id/choice2" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<Button android:text="Choice3" android:onClick="choice3" android:id="@+id/choice3" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
 </LinearLayout>
+ 
