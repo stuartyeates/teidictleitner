@@ -46,7 +46,7 @@ public class Activity extends android.app.Activity {
     }
     
     public void setNewQuestion(){
-    	question = model.generateQuestion();
+    	//question = model.generateQuestion();
     	Button q = (Button) findViewById(R.id.query);
         //q.setText(question.getQuestion().getWord());
            
