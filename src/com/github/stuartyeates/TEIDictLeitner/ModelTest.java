@@ -185,11 +185,5 @@ public class ModelTest extends TestCase {
 	    	
 	}
 	
-	public void testActivityA()
-	{
-		Activity activity = new Activity();
-		activity.choice1(null);
-		
-	}
 
 }
