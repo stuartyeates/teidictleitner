@@ -30,7 +30,7 @@ public class Model {
 	
 	private Random random = new Random(new Date().getTime());
 	
-	public void answerQuestion(Question question, int answer){
+	public boolean answerQuestion(Question question, int answer){
 			Word word = question.getQuestion();
 			if (question.correct(answer)){
 				word.incrementCount();
@@ -42,8 +42,10 @@ public class Model {
 				case 4: deck5.add(word); break;		
 				case 5: default: deck6.add(word); break;		
 				}
+				return true;
 			} else {
 			 word.resetCount();
+			 return false;
 			}
 	}
 	

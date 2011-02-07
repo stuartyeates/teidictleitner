@@ -166,20 +166,30 @@ public class ModelTest extends TestCase {
 	        if (question.getQuestion() == question.getChoice1())
 	        	answer = 1;
 	        else	
-	        	if (question.getQuestion() == question.getChoice1())
-	        		answer = 1;
+	        	if (question.getQuestion() == question.getChoice2())
+	        		answer = 2;
 		        else
-			        if (question.getQuestion() == question.getChoice1())
-			        	answer = 1;
+			        if (question.getQuestion() == question.getChoice3())
+			        	answer = 3;
 			        else
 			        	assert(false);	
         	
-	        model.answerQuestion(question, answer);
-	        model.answerQuestion(question, 1);
-	        model.answerQuestion(question, 2);
-	        model.answerQuestion(question, 3);
+	        boolean a = model.answerQuestion(question, answer);
+	        assertTrue(a);
+	        a = model.answerQuestion(question, 1);
+	        assert((a) == question.correct(1));
+	        a = model.answerQuestion(question, 2);
+	        assert((a) == question.correct(2));
+	        a = model.answerQuestion(question, 3);
+	        assert((a) == question.correct(3));
 	    	
 	}
-
+	
+	public void testActivityA()
+	{
+		Activity activity = new Activity();
+		activity.choice1(null);
+		
+	}
 
 }
