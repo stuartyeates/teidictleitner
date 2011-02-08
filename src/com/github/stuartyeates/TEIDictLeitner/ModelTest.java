@@ -143,6 +143,7 @@ public class ModelTest extends TestCase {
 	        model.maintain();
 	        
 	        Question question = model.generateQuestion();
+	        assert(question != null);
 	    	
 	}
 	public void testCreateQuestionMMA()
@@ -182,8 +183,5 @@ public class ModelTest extends TestCase {
 	        assert((a) == question.correct(2));
 	        a = model.answerQuestion(question, 3);
 	        assert((a) == question.correct(3));
-	    	
 	}
-	
-
 }
