@@ -19,37 +19,37 @@ public class ModelTest extends TestCase {
 	public void testModelCreation()
 	{
 		Model model = new Model();
-		 assert( (model!=null) );
+		 assertTrue( (model!=null) );
 	}
 
 	public void testWordCreation()
 	{
 		Word word = new Word("kia ora","welcome");
-		 assert( (word!=null) );
+		 assertTrue( (word!=null) );
 	}
 
 	public void testWordDef()
 	{
 		Word word = new Word("kia ora","welcome");
-		 assert( (word.getDefinition().compareTo("welcome") == 0) );
+		 assertTrue( (word.getDefinition().compareTo("welcome") == 0) );
 	}
 
 	public void testWordWord()
 	{
 		Word word = new Word("kia ora","welcome");
-		 assert( (word.getWord().compareTo("kia ora") == 0) );
+		 assertTrue( (word.getWord().compareTo("kia ora") == 0) );
 	}
 
 	public void testWordWord2()
 	{
 		Word word = new Word("kia ora","welcome");
-		 assert( (word.getWord().compareToIgnoreCase("kia ora") == 0) );
+		 assertTrue( (word.getWord().compareToIgnoreCase("kia ora") == 0) );
 	}
 
 	public void testWordDate()
 	{
 		Word word = new Word("kia ora","welcome");
-		 assert( (word.getDate() != null) );
+		 assertTrue( (word.getDate() != null) );
 	}
 	
 
@@ -57,7 +57,7 @@ public class ModelTest extends TestCase {
 	{
 
 		Model model = new Model();
-		 assert( (model!=null) );
+		 assertTrue( (model!=null) );
 
 	        // test
 	        model.addWord(new Word("kia ora","welcome"));
@@ -68,7 +68,7 @@ public class ModelTest extends TestCase {
 	{
 
 		Model model = new Model();
-		 assert( (model!=null) );
+		 assertTrue( (model!=null) );
 
 	        // test
 	        model.addWord(new Word("kia ora","welcome"));
@@ -79,7 +79,7 @@ public class ModelTest extends TestCase {
 	{
 
 		Model model = new Model();
-		 assert( (model!=null) );
+		 assertTrue( (model!=null) );
 
 	        // test
 	        model.addWord(new Word("kia ora","welcome"));
@@ -92,7 +92,7 @@ public class ModelTest extends TestCase {
 	{
 
 		Model model = new Model();
-		 assert( (model!=null) );
+		 assertTrue( (model!=null) );
 
 	        // test
 	        model.maintain();
@@ -101,7 +101,7 @@ public class ModelTest extends TestCase {
 	{
 
 		Model model = new Model();
-		 assert( (model!=null) );
+		 assertTrue( (model!=null) );
 
 	        // test
 	        model.addWord(new Word("kia ora","welcome"));
@@ -115,7 +115,7 @@ public class ModelTest extends TestCase {
 	{
 
 		Model model = new Model();
-		 assert( (model!=null) );
+		 assertTrue( (model!=null) );
 
 	        // test
 	        model.addWord(new Word("kia ora","welcome"));
@@ -125,13 +125,14 @@ public class ModelTest extends TestCase {
 	        model.addWord(new Word("ringa","hand"));
 	        model.maintain();
 	        model.maintain();
+			 assertTrue( (model!=null) );
 	}
 
 	public void testCreateQuestionMM()
 	{
 
 		Model model = new Model();
-		 assert( (model!=null) );
+		 assertTrue( (model!=null) );
 
 	        // test
 	        model.addWord(new Word("kia ora","welcome"));
@@ -143,14 +144,14 @@ public class ModelTest extends TestCase {
 	        model.maintain();
 	        
 	        Question question = model.generateQuestion();
-	        assert(question != null);
+	        assertTrue(question != null);
 	    	
 	}
 	public void testCreateQuestionMMA()
 	{
 
 		Model model = new Model();
-		 assert( (model!=null) );
+		 assertTrue( (model!=null) );
 
 	        // test
 	        model.addWord(new Word("kia ora","welcome"));
