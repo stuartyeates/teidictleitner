@@ -9,6 +9,7 @@ import java.util.Random;
 public class Model {
 	
 	private final int POOL_SIZE = 20;
+	private final int MIN_SIZE = 3;
 	// milliseconds in 5 hours
 	private final long POOL_GAP_1 = 1000*60*60*6;
 	// milliseconds in 23 hours
@@ -50,6 +51,12 @@ public class Model {
 	}
 	
 	public Question generateQuestion(){
+		if (deck1.size() < MIN_SIZE) {
+			maintain();
+		}
+		if (deck1.size() < MIN_SIZE) {
+			return null;
+		}
 		Word choice1 = deck1.get(random.nextInt(deck1.size()-1));
 		Word choice2 = null;
 		Word choice3 = null;

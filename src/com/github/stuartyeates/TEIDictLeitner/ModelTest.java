@@ -163,7 +163,7 @@ public class ModelTest extends TestCase {
 	        model.maintain();
 	        
 	        Question question = model.generateQuestion();
-	        assert(question != null);
+	        assertTrue(question != null);
 	        int answer = 0;
 	        if (question.getQuestion() == question.getChoice1())
 	        	answer = 1;
@@ -174,15 +174,32 @@ public class ModelTest extends TestCase {
 			        if (question.getQuestion() == question.getChoice3())
 			        	answer = 3;
 			        else
-			        	assert(false);	
+			        	assertTrue(false);	
         	
 	        boolean a = model.answerQuestion(question, answer);
 	        assertTrue(a);
 	        a = model.answerQuestion(question, 1);
-	        assert((a) == question.correct(1));
+	        assertTrue((a) == question.correct(1));
 	        a = model.answerQuestion(question, 2);
-	        assert((a) == question.correct(2));
+	        assertTrue((a) == question.correct(2));
 	        a = model.answerQuestion(question, 3);
-	        assert((a) == question.correct(3));
+	        assertTrue((a) == question.correct(3));
+	}
+	
+	public void testActivityLike(){
+		Model model = new Model();
+		Question question = null;
+
+        // test
+        model.addWord(new Word("kia ora","welcome"));
+        model.addWord(new Word("kakariki","green"));
+        model.addWord(new Word("whero","red"));
+        model.addWord(new Word("pango","black"));
+        model.addWord(new Word("ringa","hand"));
+      	System.err.println("clicked: 0");
+      	question = model.generateQuestion();
+      	assertNotNull(question);
+
+		
 	}
 }
