@@ -1,7 +1,13 @@
 README
 ======
 
-A simple TEI-based Leitner-like vocab memorisation tool for Android mobile phones.
+A simple TEI-based Leitner-like vocab memorisation tool for Android mobile 
+phones. The basic goal is to enabling the use of TEI-based bi-lingual 
+dictionaries as vocabularisation tools in such a way as to lose non of the 
+information in the original TEI.
+
+Technically the project is an eclipse/Java project using the eclipse 
+android plugins, but not the eclipse git plugin.
 
 See:
 http://en.wikipedia.org/wiki/Spaced_repetition
