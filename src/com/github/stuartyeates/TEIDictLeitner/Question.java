@@ -2,12 +2,17 @@ package com.github.stuartyeates.TEIDictLeitner;
 
 public class Question {
 	public Question(int question, Word choice1, Word choice2, Word choice3) {
-		if (question > 3) throw new Error("question too high");
-		if (question < 1) throw new Error("question too low");
-		if (choice1 == null) throw new Error("choice1 null");
-		if (choice2 == null) throw new Error("choice2 null");
-		if (choice3 == null) throw new Error("choice3 null");
-		
+		if (question > 3)
+			throw new Error("question too high");
+		if (question < 1)
+			throw new Error("question too low");
+		if (choice1 == null)
+			throw new Error("choice1 null");
+		if (choice2 == null)
+			throw new Error("choice2 null");
+		if (choice3 == null)
+			throw new Error("choice3 null");
+
 		this.question = question;
 		this.choice1 = choice1;
 		this.choice2 = choice2;
@@ -31,11 +36,14 @@ public class Question {
 			throw new Error();
 		}
 	};
-	
-	public boolean correct(int answer){
+
+	public boolean correct(int answer) {
 		return (answer == question);
 	}
-	
+
+	public int question() {
+		return question;
+	}
 
 	public Word getChoice1() {
 		return choice1;

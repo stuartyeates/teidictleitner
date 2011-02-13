@@ -16,190 +16,215 @@ public class ModelTest extends TestCase {
 		super.tearDown();
 	}
 
-	public void testModelCreation()
-	{
+	public void testModelCreation() {
 		Model model = new Model();
-		 assertTrue( (model!=null) );
+		assertTrue((model != null));
 	}
 
-	public void testWordCreation()
-	{
-		Word word = new Word("kia ora","welcome");
-		 assertTrue( (word!=null) );
+	public void testWordCreation() {
+		Word word = new Word("kia ora", "welcome");
+		assertTrue((word != null));
 	}
 
-	public void testWordDef()
-	{
-		Word word = new Word("kia ora","welcome");
-		 assertTrue( (word.getDefinition().compareTo("welcome") == 0) );
+	public void testWordDef() {
+		Word word = new Word("kia ora", "welcome");
+		assertTrue((word.getDefinition().compareTo("welcome") == 0));
 	}
 
-	public void testWordWord()
-	{
-		Word word = new Word("kia ora","welcome");
-		 assertTrue( (word.getWord().compareTo("kia ora") == 0) );
+	public void testWordWord() {
+		Word word = new Word("kia ora", "welcome");
+		assertTrue((word.getWord().compareTo("kia ora") == 0));
 	}
 
-	public void testWordWord2()
-	{
-		Word word = new Word("kia ora","welcome");
-		 assertTrue( (word.getWord().compareToIgnoreCase("kia ora") == 0) );
+	public void testWordWord2() {
+		Word word = new Word("kia ora", "welcome");
+		assertTrue((word.getWord().compareToIgnoreCase("kia ora") == 0));
 	}
 
-	public void testWordDate()
-	{
-		Word word = new Word("kia ora","welcome");
-		 assertTrue( (word.getDate() != null) );
+	public void testWordDate() {
+		Word word = new Word("kia ora", "welcome");
+		assertTrue((word.getDate() != null));
 	}
-	
 
-	public void testAddition()
-	{
+	public void testAddition() {
 
 		Model model = new Model();
-		 assertTrue( (model!=null) );
+		assertTrue((model != null));
 
-	        // test
-	        model.addWord(new Word("kia ora","welcome"));
-	
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+
 	}
 
-	public void testAddition2()
-	{
+	public void testAddition2() {
 
 		Model model = new Model();
-		 assertTrue( (model!=null) );
+		assertTrue((model != null));
 
-	        // test
-	        model.addWord(new Word("kia ora","welcome"));
-	        model.addWord(new Word("kia ora","welcome"));
-	
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+		model.addWord(new Word("kia ora", "welcome"));
+
 	}
-	public void testAdd()
-	{
+
+	public void testAdd() {
 
 		Model model = new Model();
-		 assertTrue( (model!=null) );
+		assertTrue((model != null));
 
-	        // test
-	        model.addWord(new Word("kia ora","welcome"));
-	        model.addWord(new Word("kakariki","green"));
-	        model.addWord(new Word("whero","red"));
-	        model.addWord(new Word("pango","black"));
-	        model.addWord(new Word("ringa","hand"));
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+		model.addWord(new Word("kakariki", "green"));
+		model.addWord(new Word("whero", "red"));
+		model.addWord(new Word("pango", "black"));
+		model.addWord(new Word("ringa", "hand"));
 	}
-	public void testMaintain()
-	{
+
+	public void testMaintain() {
 
 		Model model = new Model();
-		 assertTrue( (model!=null) );
+		assertTrue((model != null));
 
-	        // test
-	        model.maintain();
+		// test
+		model.maintain();
 	}
-	public void testAddMaintain()
-	{
+
+	public void testAddMaintain() {
 
 		Model model = new Model();
-		 assertTrue( (model!=null) );
+		assertTrue((model != null));
 
-	        // test
-	        model.addWord(new Word("kia ora","welcome"));
-	        model.addWord(new Word("kakariki","green"));
-	        model.addWord(new Word("whero","red"));
-	        model.addWord(new Word("pango","black"));
-	        model.addWord(new Word("ringa","hand"));
-	        model.maintain();
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+		model.addWord(new Word("kakariki", "green"));
+		model.addWord(new Word("whero", "red"));
+		model.addWord(new Word("pango", "black"));
+		model.addWord(new Word("ringa", "hand"));
+		model.maintain();
 	}
-	public void testAddMaintain2()
-	{
+
+	public void testAddMaintain2() {
 
 		Model model = new Model();
-		 assertTrue( (model!=null) );
+		assertTrue((model != null));
 
-	        // test
-	        model.addWord(new Word("kia ora","welcome"));
-	        model.addWord(new Word("kakariki","green"));
-	        model.addWord(new Word("whero","red"));
-	        model.addWord(new Word("pango","black"));
-	        model.addWord(new Word("ringa","hand"));
-	        model.maintain();
-	        model.maintain();
-			 assertTrue( (model!=null) );
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+		model.addWord(new Word("kakariki", "green"));
+		model.addWord(new Word("whero", "red"));
+		model.addWord(new Word("pango", "black"));
+		model.addWord(new Word("ringa", "hand"));
+		model.maintain();
+		model.maintain();
+		assertTrue((model != null));
 	}
 
-	public void testCreateQuestionMM()
-	{
+	public void testCreateQuestionMM() {
 
 		Model model = new Model();
-		 assertTrue( (model!=null) );
+		assertTrue((model != null));
 
-	        // test
-	        model.addWord(new Word("kia ora","welcome"));
-	        model.addWord(new Word("kakariki","green"));
-	        model.addWord(new Word("whero","red"));
-	        model.addWord(new Word("pango","black"));
-	        model.addWord(new Word("ringa","hand"));
-	        model.maintain();
-	        model.maintain();
-	        
-	        Question question = model.generateQuestion();
-	        assertTrue(question != null);
-	    	
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+		model.addWord(new Word("kakariki", "green"));
+		model.addWord(new Word("whero", "red"));
+		model.addWord(new Word("pango", "black"));
+		model.addWord(new Word("ringa", "hand"));
+		model.maintain();
+		model.maintain();
+
+		Question question = model.generateQuestion();
+		assertTrue(question != null);
+
 	}
-	public void testCreateQuestionMMA()
-	{
+
+	public void testCreateQuestionMMA() {
 
 		Model model = new Model();
-		 assertTrue( (model!=null) );
+		assertTrue((model != null));
 
-	        // test
-	        model.addWord(new Word("kia ora","welcome"));
-	        model.addWord(new Word("kakariki","green"));
-	        model.addWord(new Word("whero","red"));
-	        model.addWord(new Word("pango","black"));
-	        model.addWord(new Word("ringa","hand"));
-	        model.maintain();
-	        model.maintain();
-	        
-	        Question question = model.generateQuestion();
-	        assertTrue(question != null);
-	        int answer = 0;
-	        if (question.getQuestion() == question.getChoice1())
-	        	answer = 1;
-	        else	
-	        	if (question.getQuestion() == question.getChoice2())
-	        		answer = 2;
-		        else
-			        if (question.getQuestion() == question.getChoice3())
-			        	answer = 3;
-			        else
-			        	assertTrue(false);	
-        	
-	        boolean a = model.answerQuestion(question, answer);
-	        assertTrue(a);
-	        a = model.answerQuestion(question, 1);
-	        assertTrue((a) == question.correct(1));
-	        a = model.answerQuestion(question, 2);
-	        assertTrue((a) == question.correct(2));
-	        a = model.answerQuestion(question, 3);
-	        assertTrue((a) == question.correct(3));
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+		model.addWord(new Word("kakariki", "green"));
+		model.addWord(new Word("whero", "red"));
+		model.addWord(new Word("pango", "black"));
+		model.addWord(new Word("ringa", "hand"));
+		model.maintain();
+		model.maintain();
+
+		Question question = model.generateQuestion();
+		assertTrue(question != null);
+		int answer = 0;
+		if (question.getQuestion() == question.getChoice1())
+			answer = 1;
+		else if (question.getQuestion() == question.getChoice2())
+			answer = 2;
+		else if (question.getQuestion() == question.getChoice3())
+			answer = 3;
+		else
+			assertTrue(false);
+
+		boolean a = model.answerQuestion(question, answer);
+		assertTrue(a);
+		a = model.answerQuestion(question, 1);
+		assertTrue((a) == question.correct(1));
+		a = model.answerQuestion(question, 2);
+		assertTrue((a) == question.correct(2));
+		a = model.answerQuestion(question, 3);
+		assertTrue((a) == question.correct(3));
 	}
-	
-	public void testActivityLike(){
+
+	public void testActivityLike() {
 		Model model = new Model();
 		Question question = null;
 
-        // test
-        model.addWord(new Word("kia ora","welcome"));
-        model.addWord(new Word("kakariki","green"));
-        model.addWord(new Word("whero","red"));
-        model.addWord(new Word("pango","black"));
-        model.addWord(new Word("ringa","hand"));
-      	System.err.println("clicked: 0");
-      	question = model.generateQuestion();
-      	assertNotNull(question);
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+		model.addWord(new Word("kakariki", "green"));
+		model.addWord(new Word("whero", "red"));
+		model.addWord(new Word("pango", "black"));
+		model.addWord(new Word("ringa", "hand"));
+		question = model.generateQuestion();
+		assertNotNull(question);
+	}
 
-		
+	public void testModelRepeatRandom() {
+		Model model = new Model();
+		Question question = null;
+
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+		model.addWord(new Word("kakariki", "green"));
+		model.addWord(new Word("whero", "red"));
+		model.addWord(new Word("pango", "black"));
+		model.addWord(new Word("ringa", "hand"));
+		assertNotNull(model);
+		question = model.generateQuestion();
+		assertNotNull(question);
+		for (int q = 1; q < 3; q++) {
+			for (int i = 0; i < 100; i++) {
+				question = model.generateQuestion();
+				model.answerQuestion(question, q);
+			}
+		}
+	}
+
+	public void testModelRepeatRight() {
+		Model model = new Model();
+		Question question = null;
+
+		// test
+		model.addWord(new Word("kia ora", "welcome"));
+		model.addWord(new Word("kakariki", "green"));
+		model.addWord(new Word("whero", "red"));
+		model.addWord(new Word("pango", "black"));
+		model.addWord(new Word("ringa", "hand"));
+		assertNotNull(model);
+		question = model.generateQuestion();
+		assertNotNull(question);
+		for (int i = 0; i < 100; i++) {
+			question = model.generateQuestion();
+			model.answerQuestion(question, question.question());
+		}
 	}
 }

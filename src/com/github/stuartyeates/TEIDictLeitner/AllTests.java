@@ -7,11 +7,11 @@ public class AllTests {
 
 	public static Test suite() {
 		TestSuite suite = new TestSuite(AllTests.class.getName());
-		//$JUnit-BEGIN$
+		// $JUnit-BEGIN$
 		suite.addTestSuite(QuestionTest.class);
 		suite.addTestSuite(WordTest.class);
 		suite.addTestSuite(ModelTest.class);
-		//$JUnit-END$
+		// $JUnit-END$
 		return suite;
 	}
 
