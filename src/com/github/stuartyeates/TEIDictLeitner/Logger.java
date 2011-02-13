@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.*;
 
 public class Logger {
-
+/*
 	static private String LANGUAGE_CODES;
 	static private String DATABASE_NAME;
 	static private int DATABASE_VERSION = 1;
@@ -110,4 +110,5 @@ public class Logger {
 			onCreate(db);
 		}
 	}
+	*/
 }
