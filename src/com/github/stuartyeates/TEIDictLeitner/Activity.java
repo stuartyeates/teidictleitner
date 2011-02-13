@@ -39,9 +39,9 @@ public class Activity extends android.app.Activity implements OnClickListener {
 		button.setOnClickListener(this);
 
 		System.err.println("clicked 2");
-		
-		Logger logger = new Logger();
-		
+
+		//Logger logger = new Logger();
+
 		System.err.println("clicked 3");
 
 	}
