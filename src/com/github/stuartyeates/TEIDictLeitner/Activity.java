@@ -19,12 +19,8 @@ public class Activity extends android.app.Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
+		Model.addWords(model);
 		// test
-		model.addWord(new Word("kia ora", "welcome"));
-		model.addWord(new Word("kakariki", "green"));
-		model.addWord(new Word("whero", "red"));
-		model.addWord(new Word("pango", "black"));
-		model.addWord(new Word("ringa", "hand"));
 		System.err.println("clicked: 0");
 
 		question = model.generateQuestion();
@@ -72,9 +68,8 @@ public class Activity extends android.app.Activity implements OnClickListener {
 					System.err.println("clicked 3 ");
 					model.answerQuestion(question, 3);
 				} else {
-					if (clicked == c3) {
+					if (clicked == q) {
 						System.err.println("clicked title ");
-						model.answerQuestion(question, 3);
 					} else {
 						System.err.println("clicked elsewhere? ");
 					}

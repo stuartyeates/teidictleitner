@@ -158,5 +158,81 @@ public class Model {
 			this.deck1.add(word);
 		}
 	}
+	
+	static void addWords(Model model){
+		
+		// particles
+		model.addWord(new Word("te", "definite particle, singular"));
+		model.addWord(new Word("ngā", "definite particle, plural"));
+		model.addWord(new Word("ngāti", "definite particle, people"));
+		
+		// numbers 
+		model.addWord(new Word("tahi", "one"));
+		model.addWord(new Word("rua", "two"));
+		model.addWord(new Word("toru", "three"));
+		model.addWord(new Word("whā", "four"));
+		model.addWord(new Word("rima", "five"));
+		model.addWord(new Word("ono", "six"));
+		model.addWord(new Word("whitu", "seven"));
+		model.addWord(new Word("waru", "eight"));
+		model.addWord(new Word("iwa", "nine"));
+		model.addWord(new Word("tekau", "ten")); 
+		model.addWord(new Word("tekau ma tahi", "eleven"));
+		model.addWord(new Word("tekau ma rua", "twelve"));
+		model.addWord(new Word("tekau ma toru", "thirteen"));
+		model.addWord(new Word("tekau ma whā", "fourteen"));
+		model.addWord(new Word("tekau ma rima", "fifteen"));
+		model.addWord(new Word("tekau ma ono", "sixteen"));
+		model.addWord(new Word("tekau ma whitu", "seventeen"));
+		model.addWord(new Word("tekau ma waru", "eighteen"));
+		model.addWord(new Word("tekau ma iwa", "ninteen"));
+		model.addWord(new Word("rua tekau", "twenty"));
+		model.addWord(new Word("rua tekau ma tahi", "twenty one"));
+		model.addWord(new Word("rua tekau ma rua", "twenty two"));
+		model.addWord(new Word("rua tekau ma toru", "twenty three"));
+		model.addWord(new Word("rua tekau ma whā", "twenty four"));
+		model.addWord(new Word("rua tekau ma rima", "twenty five"));
+		model.addWord(new Word("rua tekau ma ono", "twenty six"));
+		model.addWord(new Word("rua tekau ma whitu", "twenty seven"));
+		model.addWord(new Word("rua tekau ma waru", "twenty eight"));
+		model.addWord(new Word("rua tekau ma iwa", "twenty nine"));
+		model.addWord(new Word("toru tekau", "thrity"));
+
+		// pronouns
+		model.addWord(new Word("au", "first person singular pronoun"));
+		model.addWord(new Word("ahau", "first person singular pronoun"));
+		model.addWord(new Word("koe", "second person singular pronoun"));
+		model.addWord(new Word("ia", "third person singular pronoun"));
+
+		// verbs
+		model.addWord(new Word("kai", "to eat (verb)"));
+		//model.addWord(new Word("", ""));
+
+		// nouns
+		model.addWord(new Word("tangata", "person"));
+		model.addWord(new Word("kurī", "dog"));
+		model.addWord(new Word("ngeru", "cat"));
+		model.addWord(new Word("rākau", "tree, stick, branch"));
+		model.addWord(new Word("whare", "house"));
+		model.addWord(new Word("kahu", "cloak"));
+		//model.addWord(new Word("", ""));
+		
+		// colours
+		model.addWord(new Word("", ""));
+		//model.addWord(new Word("", ""));
+
+		// birds
+		model.addWord(new Word("rakiraki", "duck"));
+		model.addWord(new Word("kererū", "wood pigeon"));
+		model.addWord(new Word("tūī", "tui"));
+		model.addWord(new Word("karoro", "black backed gull"));
+		model.addWord(new Word("tiu", "sparrow"));
+		model.addWord(new Word("kiwi", "kiwi"));
+		model.addWord(new Word("korimako", "bellbird"));
+		model.addWord(new Word("kea", "kea"));
+		model.addWord(new Word("kaka", "kaka"));
+		//model.addWord(new Word("", ""));
+			
+	}
 
 }
